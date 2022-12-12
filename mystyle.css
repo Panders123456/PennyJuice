@@ -247,6 +247,33 @@ tr {
     padding: 20px;
     }
 
+.flex-containerab {
+    display: flex;
+    justify-content: center;
+    clear: both;
+    /*margin-left: 20px;
+    margin-bottom: 20px;*/
+}
+
+.flex-containerab > div {
+    width: 75%;
+    color: aliceblue;
+    margin: 5px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 10px;   
+    margin-left: -80px;
+    margin-top: 20px;
+}
+
+.flex-containerab > div > h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.flex-containerab > div > img {
+    margin:0px;
+}
 .flex-containerf1 {
     display: flex;
     justify-content: row;
@@ -388,29 +415,79 @@ h2f {
     
 }
 
-.carousel-wrapper {
-    height: 400px;
+/*.container{
+    padding: 2rem;
+}
+
+.slider-wrapper{
     position: relative;
-    width: 800px;
+    max-width: 48rem;
     margin: 0 auto;
 }
 
-.carousel-item {
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
     position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}*/
+
+.carousel-wrapper{
+    height: 400px;
+    position: relative;
+    width: 850px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.carousel-item{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 25px 50px;
     opacity: 0;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .arrow{
-    border: solid black;
+    border: solid #b987d4;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 12px;
+    margin: 12px;
 }
 
 .arrow-prev{
@@ -421,9 +498,9 @@ h2f {
 }
 
 .arrow-next{
-    left: -30px;
+    right: -30px;
     position: absolute;
-    top: 50%;
+    top:50%;
     transform: translateY(-50%) rotate(-45deg);
 }
 
@@ -432,14 +509,13 @@ h2f {
 }
 
 @media (max-width: 480px) {
-    .arrow, .light .arrow {
+    .arrow, .light .arrow{
         background-size: 10px;
         background-position: 10px 50%;
-    }  
-  }
+    }
 }
-/* Select Every Element*/
 
+/*Select every element*/
 [id^="item"] {
     display: none;
 }
@@ -447,48 +523,59 @@ h2f {
 .item-1 {
     z-index: 2;
     opacity: 1;
-    background: url('https://c4.wallpaperflare.com/wallpaper/566/414/554/oranges-citrus-fruit-peel-wallpaper-preview.jpg');
+    background: url('https://images.unsplash.com/photo-1591206369811-4eeb2f03bc95?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8b3JhbmdlJTIwZnJ1aXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
     background-size: cover;
 }
 
-.item-2 {
-    background: url('https://c4.wallpaperflare.com/wallpaper/566/414/554/oranges-citrus-fruit-peel-wallpaper-preview.jpg');
+.item-2{
+    background: url('https://images.unsplash.com/photo-1513682255736-029c3088cf83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODN8fGJlcnJpZXMlMjBmcnVpdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
     background-size: cover;
 }
 
-.item-3 {
-    background: url('https://c4.wallpaperflare.com/wallpaper/566/414/554/oranges-citrus-fruit-peel-wallpaper-preview.jpg');
+.item-3{
+    background: url('https://images.unsplash.com/photo-1440288736878-766bd5839edb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNoaWxkcmVuJTIwcGxheWluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
     background-size: cover;
 }
 
 *:target ~ .item-1 {
-    opacity: 1;
+    opacity: 0;
 }
 
 #item-1:target ~ .item-1 {
-    opacity: 0;
+    opacity: 1;
 }
 
 #item-2:target ~ .item-2, #item-3:target ~ .item-3 {
     z-index: 3;
-    opacity: 1;
+    opacity:1;
 }
+
+.carousel-item.item-2 > h2 {
+    color: aliceblue;
+    padding-left: 0px;
 }
 
+.carousel-item.item-2 > p {
+    color: aliceblue;
+    margin: 0px;
+}
 
+.carousel-item.item-1 > h2 {
+    padding-left: 0px;
+    color: #974bc1;
+}
 
+.carousel-item.item-1 > p {
+    margin: 0px;
+    color: #a95ad4;
+}
 
+.carousel-item.item-3 > h2 {
+    padding-left: 0px;
+    color: #8fe661;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.carousel-item.item-3 > p {
+    color: #fff0bd;
+    margin: 0px;
+}
