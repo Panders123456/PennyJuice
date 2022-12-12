@@ -196,7 +196,7 @@ tr {
 
 .flex-container {
     display: flex;
-    background-color: #f8dcb7;
+    background-color: bisque;
     justify-content: center;
     clear: both;
 }
@@ -242,7 +242,7 @@ tr {
     flex-wrap: wrap;
     display: flex;
     justify-content: flex-end;
-    background-color: #f5c66e;
+    background-color: bisque;
     color: white;
     padding: 20px;
     }
@@ -251,6 +251,8 @@ tr {
     display: flex;
     justify-content: center;
     clear: both;
+    background-color: #b987d4;
+    padding-bottom: 65px;
     /*margin-left: 20px;
     margin-bottom: 20px;*/
 }
@@ -279,7 +281,7 @@ tr {
     justify-content: row;
     clear: both; 
     margin-top: auto;
-    background-color: #f5c66e;
+    background-color: bisque;
 }
 
 .flex-containerf1 > div {
@@ -289,7 +291,14 @@ tr {
     text-align: left;
     line-height: 25px;
     font-size: 12px;
-    color: white;
+    color: #b86ee0;
+    margin-top: 25px;
+    font-weight: 550;
+}
+
+.flex-containerf1 > img {
+    margin-top: 25px;
+    margin-right: 25px;
 }
 
 .flex-containerf3 {
@@ -297,7 +306,7 @@ tr {
     justify-content: row;
     clear: both; 
     margin-top: auto;
-    background-color: #f5c66e;
+    background-color: bisque;
 }
 
 .flex-containerf3 > div {
@@ -307,13 +316,20 @@ tr {
     text-align: left;
     line-height: 25px;
     font-size: 12px;
-    color: white;
+    color: #b86ee0;
+    margin-top: 25px;
+    font-weight: 550;
+}
+
+.flex-containerf3 > img {
+    margin-top: 25px;
+    margin-left: 25px;
 }
 
 h2f {
     margin: 0;
     padding: 10px;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .flex-containerf2 {
@@ -332,6 +348,24 @@ h2f {
     line-height: 75px;
     font-size: 30px;
 }
+
+.flex-containering {
+    display: flex;
+    background-color: aliceblue;
+    justify-content: center;
+    clear: both;
+}
+
+.flex-containering > div {
+    background-color: cadetblue;
+    color: rgb( 203, 183, 255);
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
 
 .flex-containerI1 {
     display: flex;
@@ -469,6 +503,7 @@ h2f {
     width: 850px;
     margin: 0 auto;
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .carousel-item{
@@ -578,4 +613,16 @@ h2f {
 .carousel-item.item-3 > p {
     color: #fff0bd;
     margin: 0px;
+}
+
+intro > h4 {
+    margin-left: 25px;
+    line-height: 2;
+    font-size: 25px;
+    color: aliceblue;
+}
+form > label {
+    margin-left: 25px;
+    color: aliceblue;
+    font-size: 18px;
 }
